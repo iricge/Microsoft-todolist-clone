@@ -1,12 +1,3 @@
-let hamburgerBtn = document.getElementById("hamburgerbtn");
-let hamburgerIcon = document.getElementById("hamburgericon");
-let hamburgerMenu = document.querySelector(".hamburger-menu");
-
-hamburgerBtn.addEventListener("click", () => {
-  hamburgerIcon.classList.toggle("active");
-  hamburgerMenu.classList.toggle("hamburger-activate");
-});
-
 
 //declearing html elements
 

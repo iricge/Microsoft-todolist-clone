@@ -33,6 +33,7 @@
           <input type="file" id="file">
           <label for="file" id="uploadBtn">Choose Photo</label>
         </div>
+
          <h4 class="username">Iric gorgi</h4>
          <p class="user-email">iricgorgi@gmail.com</p>
        </div>
@@ -58,11 +59,41 @@
 
      </section>
      <section class="task-section" id="task-section">
-      <div class="hamburger-menu-btn">
-        <button type="button" class="hamburger-btn" id="hamburgerbtn">
-          <div class="hamburger-icon" id="hamburgericon"></div>
-        </button>
+
+       <div class="task-header-section">
+
+         <div class="taskheader-name-date">
+           <h1 class="list-name">My day</h1>
+           <p class="the-date">Thursday, March 31</>
+         </div>
+
+         <div class="task-header-options">
+           <ul>
+             <li class="options-button"><i class="fa fa-ellipsis-h"></i>
+              <ul class="taskheader-options-dropdown">
+                <li><i class="fa fa-print"></i>Print</li>
+                <li><i class="fa fa-envelope"></i>Email list</li>
+                <li><i class="fa fa-map-pin"></i>Pin</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="no-tasks-svg">
+          <img src="resource\images\logo\weekly-calendar-monthly-calendar-svgrepo-com.svg" alt="Calendar" class="calendar-notaks-svg">
+          <h2 class="no-tasks-head">Focus on your day</h2>
+          <p class="no-tasks-discreption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, mollitia.</p>
+        </div>
+
+       </div>
+
+       <div class="task-wrapper">
+        <div class="task-generator">
+          <input type="text" class="taskgene-title">
+          <button type="button" class="task-submitbtn"><i class="fa fa-plus"></i></button>
+        </div>
       </div>
+
      </section>
     </main>
   <script src="scripts/script.js"></script>
