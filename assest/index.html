@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todolist</title>
+  <link href="style/style.css" rel="stylesheet" />
+
+  <link href="style/fontawesome.min.css" rel="stylesheet" />
+
+  <link href="style/all.css" rel="stylesheet" />
+
+  <link href="#" rel="shortcut icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
+  
+
+  <link rel="shortcut icon" type="image/jpg" href="resource/images/favicon/icons8-microsoft-to-do-app-32.png"/>
+</head>
+<div class="container">
+ <body>
+   <main>
+     <section class="list-section" id="list-section">
+
+      <div class="list-wrapper">
+
+        <div class="userinfo-section">
+
+        <div class="profile-picture-box">
+          <img src="resource/images/thumbnails/image.jpg" alt="pfp" class="profile-picture">
+          <input type="file" id="file">
+          <label for="file" id="uploadBtn">Choose Photo</label>
+        </div>
+         <h4 class="username">Iric gorgi</h4>
+         <p class="user-email">iricgorgi@gmail.com</p>
+       </div>
+       <!-- User info on top of the lists -->
+       
+       <div class="search-box">
+         <input type="search" placeholder="Search...">
+       </div>
+       <!-- search box -->
+
+       <div class="main-lists">
+         <ul>
+           <li class="base-lsit"><i class="fa fa-sun"></i>My Day</li>
+           <li class="base-lsit"><i class="fa fa-star"></i>Important</li>
+           <li class="base-lsit"><i class="fa fa-newspaper"></i>Planned</li>
+           <li class="base-lsit"><i class="fa fa-check-circle"></i>Complete</li>
+           <li class="base-lsit"><i class="fa fa-home"></i>Tasks</li>
+         </ul>
+       </div>
+       <!-- Main lists -->
+       <hr>
+      </div>
+
+     </section>
+     <section class="task-section" id="task-section">
+      <div class="hamburger-menu-btn">
+        <button type="button" class="hamburger-btn" id="hamburgerbtn">
+          <div class="hamburger-icon" id="hamburgericon"></div>
+        </button>
+      </div>
+     </section>
+    </main>
+  <script src="scripts/script.js"></script>
+  </body>
+</div> <!-- ? End of container -->
+</html>
