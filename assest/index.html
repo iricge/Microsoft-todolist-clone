@@ -21,6 +21,7 @@
 </head>
 <div class="container">
  <body>
+   <div class="blakcscreen"></div>
    <main>
      <section class="list-section" id="list-section">
 
@@ -33,17 +34,16 @@
           <input type="file" id="file">
           <label for="file" id="uploadBtn">Choose Photo</label>
         </div>
-
+        <!--! End of User info Profile picture box  -->
+        <button type="button" class="listmenu-hambackbtn"><i class="fa fa-arrow-right"></i></button>
          <h4 class="username">Iric gorgi</h4>
          <p class="user-email">iricgorgi@gmail.com</p>
        </div>
-       <!-- User info on top of the lists -->
-       
+        <!--! End of User info Sections -->
        <div class="search-box">
          <input type="search" placeholder="Search...">
        </div>
-       <!-- search box -->
-
+       <!--! End of List Search Box  -->
        <div class="main-lists">
          <ul>
            <li class="base-lsit"><i class="fa fa-sun"></i>My Day</li>
@@ -51,22 +51,28 @@
            <li class="base-lsit"><i class="fa fa-newspaper"></i>Planned</li>
            <li class="base-lsit"><i class="fa fa-check-circle"></i>Complete</li>
            <li class="base-lsit"><i class="fa fa-home"></i>Tasks</li>
-         </ul>
-       </div>
-       <!-- Main lists -->
-       <hr>
+          </ul>
+        </div>
+        <!--! End of Main Lists  -->
+        <hr>
+        <div class="customizable-list">
+          <h2>Coming Soon</h2>
+          <p>Costumizable Lists</p>
+        </div>
       </div>
-
-     </section>
+      <!--! End of List Wrapper and container  -->
+    </section>
+    <!--! End of list section -->
      <section class="task-section" id="task-section">
 
        <div class="task-header-section">
 
          <div class="taskheader-name-date">
            <h1 class="list-name">My day</h1>
-           <p class="the-date">Thursday, March 31</>
+           <p class="the-date">Thursday, March 31</p>
+          <button class="listmenu-hambtn"><i class="fa fa-th-list"></i></button>
          </div>
-
+        <!--! End of Task header Name And Date  -->
          <div class="task-header-options">
            <ul>
              <li class="options-button"><i class="fa fa-ellipsis-h"></i>
@@ -78,25 +84,25 @@
             </li>
           </ul>
         </div>
-
+        <!--! End of Task header options  -->
         <div class="no-tasks-svg">
           <img src="resource\images\logo\weekly-calendar-monthly-calendar-svgrepo-com.svg" alt="Calendar" class="calendar-notaks-svg">
           <h2 class="no-tasks-head">Focus on your day</h2>
           <p class="no-tasks-discreption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, mollitia.</p>
         </div>
-
-       </div>
-
+      </div>
+      <!-- ! End of task header -->
        <div class="task-wrapper">
         <div class="task-generator">
           <input type="text" class="taskgene-title">
           <button type="button" class="task-submitbtn"><i class="fa fa-plus"></i></button>
         </div>
       </div>
-
+      <!--! End of task wrapper and task container -->
      </section>
     </main>
-  <script src="scripts/script.js"></script>
+    <!-- <script src="scripts/uploadimage.js"></script> -->
+  <script src="scripts/hamburgerlist.js"></script>
   </body>
-</div> <!-- ? End of container -->
+</div> <!--! End of container -->
 </html>

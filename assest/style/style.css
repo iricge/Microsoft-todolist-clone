@@ -28,10 +28,17 @@ main .list-section {
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 350px;
+  z-index: 100;
+  width: 320px;
   height: 100vh;
   background-color: var(--list-section-theme);
   color: var(--pale-white-txt);
+}
+@media (max-width: 800px) {
+  #list-section {
+    display: none;
+    left: -100%;
+  }
 }
 .list-section .list-wrapper {
   overflow: auto;
@@ -43,10 +50,12 @@ main .list-section {
   scrollbar-color: var(--text-theme) var(--task-section-theme);
   scroll-behavior: smooth;
 }
-/*? User information panel */
+ /*? User information panel */
 .userinfo-section {
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   -webkit-touch-callout: text;
   -webkit-user-select: text;
@@ -63,8 +72,7 @@ main .list-section {
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid grey;
-  margin: 5px; 
-  transition: all 0.3s ease;
+  margin: 10px; 
 }
 
 #file{
@@ -92,17 +100,11 @@ main .list-section {
 } 
 
 .userinfo-section .username{
-  position: absolute;
-  top: 15px;
-  right: 10px;
   font-size: 1.3rem;
-  width: 200px;
+  width: max-content;
 }
 
 .userinfo-section .user-email{
-  position: absolute;
-  top: 47px;
-  right: 49px;
   font-size: 1.1rem;
   text-transform: lowercase;
 }
@@ -111,12 +113,14 @@ main .list-section {
 
 .search-box{
   position: relative;
+  display: flex;
+  justify-content: center;
   margin: 10px 0;
   transition: all 0.3s ease-in;
 }
 
 .search-box input{
-  width: 100%;
+  width: 95%;
   padding: 8px;
   border-radius: 5px;
   border: none;
@@ -139,7 +143,7 @@ main .list-section {
   font-weight: 900;
   position: absolute;
   top: 12px;
-  right: 8px;
+  right: 40px;
   color: #808080;
 }
 /*! End Search box */
@@ -191,6 +195,12 @@ main .list-section {
 .fa-home {
   color: #469993;
 }
+.customizable-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
 /*! End Main lists */
 /*! End list Section*/
 main .task-section {
@@ -201,8 +211,12 @@ main .task-section {
   position: relative;
   overflow: hidden;
   background-color: var(--task-section-theme);
+  z-index: 3;
 }
 /*? Task header options  */
+.task-header-section {
+  height: 100px;
+}
 .task-header-options{
   width: min-content;
   position: absolute;
@@ -245,6 +259,7 @@ main .task-section {
 .task-header-options .taskheader-options-dropdown li{
   width: 200px;
   height: 30px;
+  font-size: 1.1rem;
   line-height: 30px;
   margin: 10px 0;
   color: var(--pale-white-txt);
@@ -254,7 +269,6 @@ main .task-section {
 .task-header-options .taskheader-options-dropdown li:hover{
   background-color: #323232;
 }
-
 .task-header-options .taskheader-options-dropdown li i{
   margin: 0 10px;
 }
@@ -262,7 +276,9 @@ main .task-section {
 
 /*? Task header Name & date  */
 .taskheader-name-date {
-  margin: 20px 0 0 20px;
+  position: absolute;
+  left: 20px;
+  margin: 20px 0 0 0;
   line-height: 30px;
   color: var(--text-theme);
   font-size: 1.3rem;
@@ -272,6 +288,19 @@ main .task-section {
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
+}
+.taskheader-name-date .list-name {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (max-width: 1100px){
+  .taskheader-name-date {
+    font-size: 0.9rem;
+  }
 }
 /*! End Task header Name & date  */
 
@@ -290,10 +319,41 @@ main .task-section {
 }
 .no-tasks-svg p {
   width: 300px;
+  font-size: 0.9rem;
 }
 .calendar-notaks-svg{
   width: 100px;
   height: 100px;
+}
+@media (max-width: 1100px){
+  .calendar-notaks-svg {
+    width: 80px;
+    height: 80px;
+  }
+  .no-tasks-svg p {
+    width: 300px;
+    font-size: 0.9rem;
+  }
+  .no-tasks-svg h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 476px){
+  .calendar-notaks-svg {
+    width: 70px;
+    height: 70px;
+  }
+  .no-tasks-svg p {
+    width: 250px;
+    font-size: 0.8rem;
+  }
+  .no-tasks-svg h2 {
+    font-size: 1.2rem;
+  }
+  .taskheader-options-dropdown li {
+    width: 140px!important;
+    font-size: 0.9rem!important;
+  }
 }
 /*! End no task svg */
 /*? Task Section */
@@ -301,6 +361,7 @@ main .task-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* position: relative; */
   overflow: auto;
   width: 90%;
   max-width: 90%;
@@ -311,8 +372,7 @@ main .task-section {
 }
 .task-generator{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   width: 100%;
   position: absolute;
   top: 90%;
@@ -320,9 +380,10 @@ main .task-section {
   transform: translateX(-50%);
 }
 .task-generator input[type="text"]{
-  width: 90%;
+  position: sticky;
+  width: 95%;
   height: 50px;
-  padding: 10px;
+  padding: 10px 40px;
   background-color: #292929;
   color: var(--pale-white-txt);
   border-radius: 5px;
@@ -340,9 +401,73 @@ main .task-section {
 }
 .task-generator .task-submitbtn{
   position: absolute;
+  color: var(--text-theme);
+  left: 3%;
+  margin: 0 15px;
+  line-height: 50px;
   border: none;
   outline: none;
   background-color: transparent;
 }
 /*! End Task Section */
-/*? scrollbar customization */
+/*? Hambrger List section media queries */
+.blakcscreen {
+  display: none;
+  background-color: #00000067;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+/* to add black overlay effect */
+@media (min-width: 800px) {
+  .listmenu-hambtn {
+    display: none;
+  }
+  .listmenu-hambackbtn{
+    display: none;
+  }
+}
+.listmenu-hambtn {
+  position: absolute;
+  left: -3px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--pale-white-txt);
+}
+.listmenu-hambtn:hover {
+  cursor: pointer;
+  background-color: #323232;
+}
+.listmenu-hambackbtn{
+  position: absolute;
+  left: 90%;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--pale-white-txt);
+}
+.listmenu-hambackbtn:hover {
+  cursor: pointer;
+  background-color: #323232;
+}
+/*! End Hambrger List section media queries */
+/*? Classes to add with javascript  */
