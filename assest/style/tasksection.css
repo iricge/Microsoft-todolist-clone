@@ -1,0 +1,266 @@
+main .task-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--task-section-theme);
+  z-index: 3;
+}
+/*? Task header options  */
+.task-header-section {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.task-header-options{
+  width: min-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px 20px 0 0;
+}
+.task-header-options .options-button{
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  color: var(--pale-white-txt);
+  vertical-align: middle;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+.task-header-options .options-button:hover{
+  cursor: pointer;
+  background-color: #323232;
+}
+.task-header-options .taskheader-options-dropdown {
+  width: max-content;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  text-align: left;
+  background-color:#272727;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+.task-header-options .options-button:hover > .taskheader-options-dropdown{
+  cursor: pointer;
+  height: 133px;
+  opacity: 1; 
+}
+.task-header-options .taskheader-options-dropdown li{
+  width: 200px;
+  height: 30px;
+  font-size: 1.1rem;
+  line-height: 30px;
+  margin: 10px 0;
+  color: var(--pale-white-txt);
+  border: none;
+  outline: none;
+}
+.task-header-options .taskheader-options-dropdown li:hover{
+  background-color: #323232;
+}
+.task-header-options .taskheader-options-dropdown li i{
+  margin: 0 10px;
+}
+/*! End Task header options  */
+
+/*? Task header Name & date  */
+.taskheader-name-date {
+  position: absolute;
+  left: 20px;
+  margin: 20px 0 0 0;
+  line-height: 30px;
+  color: var(--text-theme);
+  font-size: 1.3rem;
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.taskheader-name-date .list-name {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (max-width: 1100px){
+  .taskheader-name-date {
+    font-size: 0.9rem;
+  }
+}
+/*! End Task header Name & date  */
+
+/*? No task svg when there is no task in the list (page defualt)  */
+.no-tasks-svg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-theme);
+  text-align: center;
+}
+.no-tasks-svg p {
+  width: 300px;
+  font-size: 0.9rem;
+}
+.calendar-notaks-svg{
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 1100px){
+  .calendar-notaks-svg {
+    width: 80px;
+    height: 80px;
+  }
+  .no-tasks-svg p {
+    width: 300px;
+    font-size: 0.9rem;
+  }
+  .no-tasks-svg h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 476px){
+  .calendar-notaks-svg {
+    width: 70px;
+    height: 70px;
+  }
+  .no-tasks-svg p {
+    width: 250px;
+    font-size: 0.8rem;
+  }
+  .no-tasks-svg h2 {
+    font-size: 1.2rem;
+  }
+  .taskheader-options-dropdown li {
+    width: 140px!important;
+    font-size: 0.9rem!important;
+  }
+}
+/*! End no task svg */
+/*? Task Section */
+.task-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: relative; */
+  overflow: auto;
+  width: 90%;
+  max-width: 90%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-theme) var(--task-section-theme);
+  scroll-behavior: smooth;
+}
+.task-generator{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  padding: 10px;
+  /* border: 1px solid rgb(32, 114, 0); */
+  transform: translateX(-50%);
+  backdrop-filter: blur(50px) saturate(200%);
+  -webkit-backdrop-filter: blur(50px) saturate(200%);
+  background-color: rgba(35, 36, 36, 0.82);
+  border: 1px solid var(--text-theme);
+}
+.task-generator input[type="text"]{
+  position: fixed;
+  width: 95%;
+  height: 50px;
+  padding: 10px 0;
+  text-indent: 50px;
+  z-index: 999;
+  background-color: #292929;
+  color: var(--pale-white-txt);
+  border-radius: 5px;
+  border: 1px solid var(--text-theme);
+  outline: none;
+  transition: all 0.3s ease-in;
+
+}
+.task-generator input[type="text"]:focus{
+  -webkit-box-shadow: none; 
+  box-shadow: none;
+  outline: none;
+  border: 2px solid var(--text-theme);
+  transition: all 0.3s ease-in;
+}
+.task-generator .task-submitbtn{
+  position: absolute;
+  color: var(--text-theme);
+  left: 3%;
+  margin: 0 15px;
+  line-height: 50px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  bottom: 0;
+  /* border: 1px solid #ff0000; */
+}
+.task-container .taskparent-container{
+  width: 95%;
+  height: 100vh;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-theme) var(--task-section-theme);
+  scroll-behavior: smooth;
+}
+.taskparent-container .taskchild-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #292929;
+  border-radius: 5px;
+  z-index: 50;
+  /* border: 1px solid rgb(17, 0, 255); */
+}
+.task-title {
+  color: var(--pale-white-txt);
+}
+.tasklist-name{
+  color: var(--pale-white-txt);
+}
+.task-addtofav {
+  width: 15px;
+  height: 15px;
+}
+.task-checker {
+  width: 15px;
+  height: 15px;
+  border: none;
+  outline: none;
+  background-color: #3cff00;
+}
+/*! End Task Section */
