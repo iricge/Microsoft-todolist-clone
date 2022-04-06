@@ -1,6 +1,5 @@
 
 //declearing html elements
-
 const imgDiv = $.querySelector('.profile-picture-box');
 const profilePicture = $.querySelector('.profile-picture');
 const pfpSelector = $.querySelector('#file');
