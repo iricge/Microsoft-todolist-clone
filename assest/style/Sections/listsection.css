@@ -36,7 +36,7 @@ main .list-section {
 /* ! -------------------------------- First Time login  -------------------------------- ! */
 
 .firstlogin-form{
-  display: flex;
+  display: none;
   align-items: center;
   position: absolute;
   top: -100%;
@@ -49,8 +49,11 @@ main .list-section {
   border-radius: 10px;
   background-color: #202020;
 }
+.firsttime-login-bgn {
+  display: none;
+}
 .firstlogin-form form {
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -98,7 +101,7 @@ main .list-section {
 
 .profile-picture-box {
   position: relative;
-  display: none;
+  display: flex;
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -109,6 +112,7 @@ main .list-section {
 .user-name-email-section{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .user-name-email {
   display: flex;

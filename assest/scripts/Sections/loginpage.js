@@ -12,13 +12,12 @@ let userNameInput = $.querySelector(".username-input");
 let userEmailInput = $.querySelector(".useremail-input");
 let userInputSubmit = $.querySelector(".userInput-submit");
 
-let isUserLogin =  false;
-
 let isUserLoginJson = JSON.stringify(isUserLogin) 
 let isUserLoginData = localStorage.setItem("UserLoginStatus", isUserLoginJson);
 
 window.addEventListener("load", ()=>{
-
+  var isUserLogin =  false;
+  
   let isUserLoginLocalStorage = JSON.parse(localStorage.getItem("UserLoginStatus"));
 
   if (isUserLoginLocalStorage){
