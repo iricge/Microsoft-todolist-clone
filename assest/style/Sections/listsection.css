@@ -1,10 +1,11 @@
-/*? List Sections */
+/* ! -------------------------------- List Section -------------------------------- ! */
+
 main .list-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 100;
+  z-index: 11;
   width: 320px;
   height: 100vh;
   background-color: var(--list-section-theme);
@@ -28,17 +29,65 @@ main .list-section {
   flex-direction: column;
   width: 340px;
   padding: 10px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--text-theme) var(--task-section-theme);
+  scrollbar-width: none;
+  scrollbar-base-color: var(--text-theme) var(--task-section-theme);
   scroll-behavior: smooth;
 }
- /*? User information panel */
+/* ! -------------------------------- First Time login  -------------------------------- ! */
+
+.firstlogin-form{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  z-index: 12;
+  width: 30%;
+  height: 30vh;
+  border-radius: 10px;
+  background-color: #202020;
+}
+.firstlogin-form form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.firstlogin-form input[type="text"]{
+  width: 50%;
+  padding: 10px;
+  color: #479f99;
+  background-color: #3a3939;
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  border-radius: 5px;
+  outline: none;
+}
+.firstlogin-form .userInput-submit{
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+  color: #479f99;
+  background-color: #3a3939;
+  border-radius: 5px;
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  outline: none;
+}
+.firstloginactive {
+  top: 1%;
+  opacity: 1;
+}
+
+/* ! -------------------------------- User info Section -------------------------------- ! */
+
 .userinfo-section {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 150px;
   -webkit-touch-callout: text;
   -webkit-user-select: text;
   -khtml-user-select: text;
@@ -49,6 +98,7 @@ main .list-section {
 
 .profile-picture-box {
   position: relative;
+  display: none;
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -56,7 +106,17 @@ main .list-section {
   border: 1px solid grey;
   margin: 10px; 
 }
-
+.user-name-email-section{
+  display: flex;
+  flex-direction: column;
+}
+.user-name-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  display: none;
+}
 #file{
   display: none;
 }
@@ -90,8 +150,36 @@ main .list-section {
   font-size: 1.1rem;
   text-transform: lowercase;
 }
-/* ! End User information section */
-/*? Search box */
+/* ! -------------------------------- Login Form and page -------------------------------- ! */
+
+.FirstTimeLogin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  position: absolute;
+  
+  /* background-color: #fff; */
+}
+.firsttime-login-bgn{
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  background-color: #2a2a2a;
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  color: var(--text-theme);
+  text-transform: uppercase;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+.firsttime-login-bgn:hover {
+  background-color: var(--text-theme);
+  color: #2a2a2a;
+}
+
+/* ! -------------------------------- Lists Search Box -------------------------------- ! */
 
 .search-box{
   position: relative;
@@ -125,12 +213,11 @@ main .list-section {
   font-weight: 900;
   position: absolute;
   top: 12px;
-  right: 40px;
+  right: 20px;
   color: #808080;
 }
-/*! End Search box */
 
-/*? Main list */
+/* ! -------------------------------- Main Lists Container -------------------------------- ! */
 
 .main-lists ul li{
   height: 40px;
@@ -183,5 +270,3 @@ main .list-section {
   align-items: center;
   margin: 10px 0;
 }
-/*! End Main lists */
-/*! End list Section*/

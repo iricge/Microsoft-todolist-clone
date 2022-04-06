@@ -1,10 +1,10 @@
 
 //declearing html elements
 
-const imgDiv = document.querySelector('.profile-picture-box');
-const profilePicture = document.querySelector('.profile-picture');
-const pfpSelector = document.querySelector('#file');
-const uploadBtn = document.querySelector('#uploadBtn');
+const imgDiv = $.querySelector('.profile-picture-box');
+const profilePicture = $.querySelector('.profile-picture');
+const pfpSelector = $.querySelector('#file');
+const uploadBtn = $.querySelector('#uploadBtn');
 
 //if user hover on img div 
 
@@ -29,9 +29,20 @@ pfpSelector.addEventListener('change', function(){
         const reader = new FileReader(); //FileReader is a predefined function of JS
 
         reader.addEventListener('load', function(){
-          profilePicture.setAttribute('src', reader.result);
+            localStorage.setItem("Recent-profile-picture", reader.result)
         });
 
         reader.readAsDataURL(choosedFile);
     }
+    location.reload();
 });
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    let profilePictureUrl = localStorage.getItem("Recent-profile-picture")
+    
+    if (profilePictureUrl){
+        profilePicture.setAttribute('src', profilePictureUrl);
+    }
+
+})
+

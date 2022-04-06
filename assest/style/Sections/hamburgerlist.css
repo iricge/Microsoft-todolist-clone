@@ -1,8 +1,8 @@
-/*? Hambrger List section */
-.blakcscreen {
+/* ! -------------------------------- Hamburger List section -------------------------------- ! */
+.blakcscreen-overlay {
   display: none;
   background-color: #00000067;
-  z-index: 99;
+  z-index: 9;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,27 +12,16 @@
   height: 100vh;
 }
 /* to add black overlay effect */
-@media (min-width: 800px) {
-  .listmenu-hambtn {
-    display: none;
-  }
-  .listmenu-hambackbtn{
-    display: none;
-  }
-}
 .listmenu-hambtn {
-  position: absolute;
-  left: -3px;
-  width: 30px;
+  width: 24px;
   height: 30px;
-  line-height: 30px;
   font-size: 1.2rem;
   border-radius: 5px;
   transition: all 0.2s ease-in;
   border: none;
   outline: none;
   background-color: transparent;
-  color: var(--pale-white-txt);
+  color: var(--text-theme);
 }
 .listmenu-hambtn:hover {
   cursor: pointer;
@@ -57,4 +46,11 @@
   cursor: pointer;
   background-color: #323232;
 }
-/*! End Hambrger List section media queries */
+@media (min-width: 800px) {
+  .listmenu-hambtn {
+    display: none;
+  }
+  .listmenu-hambackbtn{
+    display: none;
+  }
+}
