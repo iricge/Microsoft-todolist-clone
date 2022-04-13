@@ -1,5 +1,4 @@
 
-let $ = document;
 const firstLoginBtn = $.querySelector(".FirstTimeLogin");
 
 const userNameEmail = $.querySelector(".user-name-email-section");
@@ -10,14 +9,13 @@ let userNameHolder = $.querySelector(".username-holder");
 let userEmailHolder = $.querySelector(".useremail-holder");
 let userNameInput = $.querySelector(".username-input");
 let userEmailInput = $.querySelector(".useremail-input");
-let userInputSubmit = $.querySelector(".userInput-submit");
+let userInputSubmit = $.querySelector(".userInput-submit")
 
-let isUserLoginJson = JSON.stringify(isUserLogin) 
-let isUserLoginData = localStorage.setItem("UserLoginStatus", isUserLoginJson);
+let isUserLogin = false;
+let isUserLoginData = localStorage.setItem("UserLoginStatus", isUserLogin );
+let isUserLoginJson = JSON.stringify(isUserLoginData) 
 
-window.addEventListener("load", ()=>{
-  var isUserLogin =  false;
-  
+window.addEventListener("load", ()=>{  
   let isUserLoginLocalStorage = JSON.parse(localStorage.getItem("UserLoginStatus"));
 
   if (isUserLoginLocalStorage){
@@ -30,25 +28,32 @@ window.addEventListener("load", ()=>{
     userProfilePictureSection.style.display = "none";
   }
 })
+
 firstLoginBtn.addEventListener("click",()=>{
   formBox.classList.toggle("firstloginactive")
 })
+
 userInputSubmit.addEventListener("click", ()=>{
+    isUserLogin = true
+    JSON.parse(localStorage.getItem("UserLoginStatus", isUserLogin))
+    console.log(isUserLogin);
+    console.log(JSON.parse(localStorage.getItem("UserLoginStatus")))
+
+  if(userNameInput.value){
+    let newUserInforamtion = {
+      userName: userNameInput.value,
+      userEmail: userEmailInput.value
+    }
   
-  let newUserInforamtion = {
-    userName: userNameInput.value,
-    userEmail: userEmailInput.value
+    let newUserInforamtionJson = JSON.stringify(newUserInforamtion);
+    let newUserInfoLocalStorage = localStorage.setItem("userProfileInfo", newUserInforamtionJson);
+    let newUserInfoJsonConvert = JSON.parse(localStorage.getItem("userProfileInfo"))
+    
+    // location.reload()
+  
+    console.log(newUserInforamtion);
+    console.log(newUserInfoJsonConvert);  
+  } else {
+    return alert("please fill requirment")
   }
-
-  let newUserInforamtionJson = JSON.stringify(newUserInforamtion);
-  let newUserInfoLocalStorage = localStorage.setItem("userProfileInfo", newUserInforamtionJson);
-  let newUserInfoJsonConvert = JSON.parse(localStorage.getItem("userProfileInfo"))
-  
-  localStorage.getItem("UserLoginStatus", isUserLogin = true)
-
-  location.reload()
-
-  console.log(newUserInforamtion);
-  console.log(newUserInfoJsonConvert);
-  
-})
+},{once: true})

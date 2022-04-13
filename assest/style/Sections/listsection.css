@@ -36,13 +36,13 @@ main .list-section {
 /* ! -------------------------------- First Time login  -------------------------------- ! */
 
 .firstlogin-form{
-  display: none;
+  display: flex;
   align-items: center;
   position: absolute;
   top: -100%;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 1;
+  opacity: 0;
   z-index: 12;
   width: 30%;
   height: 30vh;
@@ -50,10 +50,10 @@ main .list-section {
   background-color: #202020;
 }
 .firsttime-login-bgn {
-  display: none;
+  display: flex;
 }
 .firstlogin-form form {
-  display: none;
+  display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -162,12 +162,11 @@ main .list-section {
   justify-content: center;
   width: 100%;
   height: 100px;
-  z-index: 10;
+  /* z-index: 10; */
   position: absolute;
-  
-  /* background-color: #fff; */
 }
 .firsttime-login-bgn{
+  display: flex;
   padding: 15px;
   border-radius: 5px;
   font-size: 1.3rem;

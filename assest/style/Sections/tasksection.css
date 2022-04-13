@@ -84,6 +84,16 @@ main .task-section {
   -ms-user-select: text;
   user-select: text;
 }
+.taskheader-author-info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+}
+.taskheader-author-info a i {
+  color: var(--pale-white-txt);
+  padding-right: 5px;
+}
 .list-name {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -196,6 +206,9 @@ main .task-section {
   user-select: none;
 }
 /* styling the inside of the tasks */
+.taskparent-container {
+  transition: all 0.3s ease-in;
+}
 .task-title{
   color: var(--pale-white-txt);
   -webkit-touch-callout: text;
@@ -205,26 +218,72 @@ main .task-section {
   -ms-user-select: text;
   user-select: text;
 }
-
-.tasklist-container input[type="checkbox"]{
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+.taskdelete-btn {
+  margin: 0 5px;
+  position: absolute;
+  right: 70px;
+  font-size: 1.3rem;
+  padding: 10px;
   border: none;
   outline: none;
   background-color: transparent;
+  color: var(--text-theme);
+}
+.taskdelete-btn:hover {
+  cursor: pointer;
+  color: red;
+}
+.custom-checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.custom-checkbox .checkmark {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  border: 2px solid #222;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--text-theme) url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/1250% no-repeat;
+  transition: background-size 0.2s ease;
 }
 
-.task-checker{
-  margin-right: 5px;
-  
+.custom-checkbox input:checked + .checkmark {
+  background-size: 60%;
+  transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
 }
-.task-addtoimportant {
-  accent-color: #ffff00;
-  /* visibility:hidden; */
-  font-size:30px;
-  cursor:pointer;
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-importantcheckbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0;
   margin-left: auto;
+}
+.custom-importantcheckbox .important-checkmark {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  border: 2px solid #222;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--text-theme) url(https://img.icons8.com/ios-filled/344/ffffff/star--v1.png) center/1200% no-repeat;
+  transition: background-size 0.2s ease;
+}
+
+.custom-importantcheckbox input:checked + .important-checkmark {
+  background-size: 70%;
+  transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
+}
+
+.custom-importantcheckbox input {
+  display: none;
 }
 /* ! -------------------------------- Task Section Input -------------------------------- ! */
 
@@ -266,87 +325,3 @@ main .task-section {
   border: none;
   outline: none;  
 }
-/* .check-box-group {
-  display: flex;
-  flex-direction: column; 
-}
-.custom-checkbox {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-.custom-checkbox .label {
-  font-size: 1.2em;
-  margin: 0 10px;
-}
-
-.custom-checkbox .checkmark {
-  width: 25px;
-  height: 25px;
-  margin-right: 5px;
-  border: 2px solid #222;
-  display: inline-block;
-  border-radius: 50%;
-  background: var(--text-theme) url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/1250% no-repeat;
-  transition: background-size 0.2s ease;
-}
-
-.custom-checkbox input:checked + .checkmark {
-  background-size: 60%;
-  transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
-}
-
-.custom-checkbox input {
-  display: none;
-}
-.wrapper {
-  position: relative;
-  display: inline-block;
-  border: none;
-  font-size: 14px;
-  margin: 50px auto;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.wrapper input {
-  border: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  opacity: 0;
-}
-
-.wrapper label {
-  position: relative;
-  float: right;
-  color: #000000;
-}
-
-.wrapper label:before {
-  margin: 5px;
-  content: "\f005";
-  font-family: FontAwesome;
-  display: inline-block;
-  font-size: 1.5em;
-  color: rgb(0, 0, 0);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.wrapper input:checked ~ label:before {
-  color: #FFC107;
-}
-
-.wrapper label:hover ~ label:before {
-  color: #ffdb70;
-}
-
-.wrapper label:hover:before {
-  color: #FFC107;
-} */

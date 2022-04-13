@@ -27,47 +27,45 @@ function taskObjectGenerator(){
     
     taskLocalStorage(tasksArray)
     newTaskGeneratorDom(tasksArray)
-     
-    if (tasksArray.length > 0){
-      noTaskSvgSection.style.display = "none"
-    } else {
-      noTaskSvgSection.style.display = "flex"
-    }
+
+    taskTitleInput.focus()
   }
 }
+
 function taskLocalStorage(newTodoInfo) {
   localStorage.setItem("TaskInfoArray", JSON.stringify(newTodoInfo))
+  if (tasksArray.length > 0){
+    noTaskSvgSection.style.display = "none"
+  } else {
+    noTaskSvgSection.style.display = "flex"
+  }
 }
+
 function newTaskGeneratorDom(newTodoDom){
-  let newTaskLi, newTaskCheck, newTaskTitle, newTaskImportant
 
   tasksParentContainer.innerHTML = ''
   
   newTodoDom.forEach(newTask => {
-    console.log(newTask);
-
-    newTaskLi = $.createElement("li")
-    newTaskLi.classList.add("tasklist-container")
-
-    newTaskCheck = $.createElement("input")
-    newTaskCheck.setAttribute("type", "checkbox")
-    newTaskCheck.classList.add("task-checker")
-
-    newTaskTitle = $.createElement("h3")
-    newTaskTitle.classList.add("task-title")
-    newTaskTitle.innerHTML = newTask.tasktitle
-
-    newTaskImportant = $.createElement("input")
-    newTaskImportant.setAttribute("type", "checkbox")
-    newTaskImportant.classList.add("task-addtoimportant")
-
-    newTaskLi.append(newTaskCheck,newTaskTitle,newTaskImportant)
-
-    tasksParentContainer.appendChild(newTaskLi)
-
+  tasksParentContainer.insertAdjacentHTML("beforeend", '<li class="tasklist-container"><label class="custom-checkbox" tab-index="0" aria-label="Checkbox Label"><input type="checkbox"> <span class="checkmark"></span></label> <h3 class="task-title"></h3>'+ newTask.tasktitle +'<button type="button" class="taskdelete-btn" onclick="taskkRemover('+ newTask.taskId +')"><i class="fa fa-times"></i></button><label class="custom-importantcheckbox" tabindex="0" aria-label="Checkbox label"><input type="checkbox" title="Mark as Important" class="task-addtoimportant"> <span class="important-checkmark"></span></label></li>')
   });
 }
+
+function taskkRemover(taskid){
+  let taskIdLocalStorage = JSON.parse(localStorage.getItem("TaskInfoArray"));
+  
+  tasksArray = taskIdLocalStorage
+
+  let taskIdFinderLocalStorage = tasksArray.findIndex((taskIdSearch)=>{return taskIdSearch.taskId === taskid;}); 
+
+  tasksArray.splice(taskIdFinderLocalStorage, 1);
+
+  taskLocalStorage(tasksArray)
+  newTaskGeneratorDom(tasksArray)
+}
+
+
 function localStorageTaskReciver(){
+  console.log(tasksArray);
   let localStorageData = JSON.parse(localStorage.getItem("TaskInfoArray"))
 
   if(localStorageData){
@@ -76,13 +74,19 @@ function localStorageTaskReciver(){
     tasksArray = []
   }
 
-  newTaskGeneratorDom(tasksArray)
-
   if (tasksArray.length > 0){
     noTaskSvgSection.style.display = "none"
   } else {
     noTaskSvgSection.style.display = "flex"
   }
+  newTaskGeneratorDom(tasksArray)
+
 }
 taskSubmitBtn.addEventListener("click", taskObjectGenerator)
 window.addEventListener("load", localStorageTaskReciver)
+window.addEventListener("keydown", (e)=>{
+  if(e.key === 13){
+    e.preventDefault();
+    taskObjectGenerator()
+  }
+})
