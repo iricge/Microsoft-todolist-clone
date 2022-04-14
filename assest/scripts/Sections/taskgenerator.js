@@ -24,7 +24,6 @@ function taskObjectGenerator(){
   
     taskTitleInput.value = '';
   
-    
     taskLocalStorage(tasksArray)
     newTaskGeneratorDom(tasksArray)
 
@@ -84,7 +83,7 @@ function localStorageTaskReciver(){
 }
 taskSubmitBtn.addEventListener("click", taskObjectGenerator)
 window.addEventListener("load", localStorageTaskReciver)
-window.addEventListener("keydown", (e)=>{
+window.addEventListener("keypress", (e)=>{
   if(e.key === 13){
     e.preventDefault();
     taskObjectGenerator()
