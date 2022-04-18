@@ -1,9 +1,8 @@
 
 ## Microsoft Todolist Clone
 
-  
-
-I have cloned Microsoft Todolist with pure HTML, CSS, JAVASCRIPT 🦾 At this moment it's on demo , I have created a list that show what feature with be added 👏
+I have cloned Microsoft Todolist with pure HTML, CSS, JAVASCRIPT 🦾
+right now it's on demo , I have created a list for feture features 👏
 
 ### Features 📈 :
 
@@ -22,7 +21,7 @@ I have cloned Microsoft Todolist with pure HTML, CSS, JAVASCRIPT 🦾 At this mo
 
 - [ ] Sorting tasks
 
-- [ ] Task Customization Section
+- [ ] Task Edit Section
 
 - [ ] Custom Context Menu on tasks
 
@@ -39,6 +38,7 @@ I have cloned Microsoft Todolist with pure HTML, CSS, JAVASCRIPT 🦾 At this mo
 - [ ] Adding Key binds
 
 ## Desktop View
+
 <p align="center">
   <img src="assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html.png" alt="Desktop view">
 </p>
@@ -50,8 +50,6 @@ I have cloned Microsoft Todolist with pure HTML, CSS, JAVASCRIPT 🦾 At this mo
 </p>
 
 ## license & copyright
-
-  
 
 © Iric Gorgi
 Licensed under the [MIT Licensed](LICENSE).
