@@ -4,6 +4,8 @@
 I have cloned Microsoft Todolist with pure HTML, CSS, JAVASCRIPT 🦾
 right now it's on demo , I have created a list for feture features 👏
 
+You can preview here => https://microsoft-todolist-clone.netlify.app/assest/
+
 ### Features 📈 :
 
  - Fully Responsive Layout with FlexBox
