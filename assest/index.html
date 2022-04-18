@@ -1,161 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Microsoft Todolist</title>
-
-  <link href="style/style.css" rel="stylesheet" />
-
-  <link href="#" rel="shortcut icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
-  
-  <link rel="shortcut icon" type="image/jpg" href="resource/images/favicon/favicon.png"/>
-
-</head>
-
-<div class="container">
-
- <body>
-   <div class="blakcscreen-overlay"></div>
-
-   <main>
-    <div class="firstlogin-form">
-      <form action="">
-        <input type="text" class="username-input" placeholder="iric gorgi" title="your name">
-        <input type="text" class="useremail-input" placeholder="example@gmail.com" title="your email">
-        <button type="button" class="userInput-submit" title="for submiting you information" name="submit">submit</button>
-      </form>
-    </div>
-     <section class="list-section" id="list-section">
-
-      <div class="list-wrapper">
-
-        <!-- ! ------------------------------ User info section ------------------------------ ! -->
-
-        <div class="userinfo-section">
-
-        <div class="profile-picture-box">
-
-          <img src="resource/images/thumbnails/image.jpg" alt="" class="profile-picture">
-          <input type="file" id="file">
-          <label for="file" id="uploadBtn">Choose Photo</label>
-
-       </div>
-
-       <div class="FirstTimeLogin">
-        <button type="button" class="firsttime-login-bgn"><h2>Login</h2></button>
-       </div>
-          
-         <button type="button" class="listmenu-hambackbtn"><i class="fa fa-arrow-right"></i></button>
-
-        <div class="user-name-email-section">
-          <h4 class="username-holder" title="Username"></h4>
-          <p class="useremail-holder" title="User email"></p>
-        </div>
-        
-       </div>
-        <!-- ! ------------------------------ Search Box ------------------------------ ! -->
-
-       <div class="search-box">
-         <input type="search" placeholder="Search...">
-       </div>
-
-       <!-- ! ------------------------------ Main Lists ------------------------------ ! -->
-
-       <div class="main-lists">
-         <ul>
-           <li class="base-lsit"><i class="fa fa-sun"></i>My Day</li>
-           <li class="base-lsit"><i class="fa fa-star"></i>Important</li>
-           <li class="base-lsit"><i class="fa fa-newspaper"></i>Planned</li>
-           <li class="base-lsit"><i class="fa fa-check-circle"></i>Complete</li>
-           <li class="base-lsit"><i class="fa fa-home"></i>Tasks</li>
-          </ul>
-        </div>
-
-        <hr>
-      <!-- ! ------------------------------ Customizable Lists (Comming soon) ------------------------------ ! -->
-
-        <div class="customizable-list">
-          <h2>Coming Soon</h2>
-          <p>Costumizable Lists</p>
-        </div>
-
-      </div>
-      
-    </section>
-    
-     <section class="task-section" id="task-section">
-
-      <!-- ! ------------------------------ task section header ------------------------------ ! -->
-
-       <div class="task-header-section">
-
-         <div class="taskheader-name-date">
-           <h1 class="list-name">My day</h1>
-           <p class="the-date" title="Date">Thursday, March 31</p>
-           <button class="listmenu-hambtn"><i class="fa fa-th-list"></i></button>
-         </div>
-        
-         <div class="taskheader-author-info">
-          <a href="https://www.linkedin.com/in/iricge/" title="authors linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://github.com/iricge" title="authors github"><i class="fa fa-github"></i></a>
-        </div>
-
-         <!-- ! ------------------------------ task section header Options ------------------------------ ! -->
-
-         <div class="task-header-options">
-           <ul>
-             <li class="options-button"><i class="fa fa-ellipsis-h"></i>
-              <ul class="taskheader-options-dropdown">
-                <li><i class="fa fa-print"></i>Print</li>
-                <li><i class="fa fa-envelope"></i>Email list</li>
-                <li><i class="fa fa-map-pin"></i>Pin</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-        <!-- ! ------------------------------ task section No task svg (when no task) ------------------------------ ! -->
-        <div class="no-tasks-svg">
-          <img src="resource\images\logo\weekly-calendar-monthly-calendar-svgrepo-com.svg" alt="Calendar" class="calendar-notaks-svg">
-          <h2 class="no-tasks-head">Focus on your day</h2>
-          <p class="no-tasks-discreption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, mollitia.</p>
-        </div>
-      <!-- ! ------------------------------ task section Container & wrapper ------------------------------ ! -->
-
-       <div class="task-wrapper">
-
-        <div class="task-generator">
-         <form action="" class="taskgenerator-form" method="post">
-           <button type="button" class="task-submitbtn" title="Add your task"><i class="fa fa-plus"></i></button>
-           <input type="text" class="taskgene-title" title="Write your task title">
-         </form>
-        </div>
-
-        <div class="task-container">
-
-           <!-- ! ------------------------------ task section Container & placment ------------------------------ ! -->
-
-          <ul class="taskparent-container">
-          </ul>
-
-        </div>
-
-      </div>
-
-     </section>
-
-    </main> 
-    <script src="https://kit.fontawesome.com/9c345a79fa.js" crossorigin="anonymous"></script>
-    <script src="scripts/Sections/hamburgerlist.js"></script>
-    <script src="scripts/Sections/uploadimage.js"></script> 
-    <script src="scripts/Sections/taskgenerator.js"></script> 
-    <script src="scripts/Sections/loginpage.js"></script>
-  </body>
-</div> <!--! End of container -->
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Microsoft Todolist</title>
+      <link href="style/style.css" rel="stylesheet" />
+      <link href="#" rel="shortcut icon" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" type="image/jpg" href="resource/images/favicon/favicon.png"/>
+   </head>
+   <div class="container">
+      <body>
+         <div class="blakcscreen-overlay"></div>
+         <main>
+            <div class="firstlogin-form">
+               <form action="#" method="get">
+                  <input type="text" class="username-input" placeholder="iric gorgi" title="your name">
+                  <input type="email" class="useremail-input" placeholder="example@gmail.com" title="your email">
+                  <button type="button" class="userInput-submit" title="for submiting you information" name="submit">submit</button>
+               </form>
+            </div>
+            <section class="list-section" id="list-section">
+               <div class="list-wrapper">
+                  <!-- ! ------------------------------ User info section ------------------------------ ! -->
+                  <div class="userinfo-section">
+                     <div class="profile-picture-box">
+                        <img src="resource/images/thumbnails/image.jpg" alt="" class="profile-picture">
+                        <input type="file" id="file">
+                        <label for="file" id="uploadBtn">Choose Photo</label>
+                     </div>
+                     <div class="FirstTimeLogin">
+                        <button type="button" class="firsttime-login-btn">
+                           <h2>Login</h2>
+                        </button>
+                     </div>
+                     <button type="button" class="listmenu-hambackbtn"><i class="fa-solid fa-align-right"></i></button>
+                     <div class="user-name-email-section">
+                        <h4 class="username-holder" title="Username"></h4>
+                        <p class="useremail-holder" title="User email"></p>
+                     </div>
+                  </div>
+                  <!-- ! ------------------------------ Search Box ------------------------------ ! -->
+                  <div class="search-box">
+                     <input type="search" placeholder="Search...">
+                  </div>
+                  <!-- ! ------------------------------ Main Lists ------------------------------ ! -->
+                  <div class="main-lists">
+                     <ul>
+                        <li class="base-lsit"><i class="fa fa-sun"></i>My Day</li>
+                        <li class="base-lsit"><i class="fa fa-star"></i>Important</li>
+                        <li class="base-lsit"><i class="fa fa-newspaper"></i>Planned</li>
+                        <li class="base-lsit"><i class="fa fa-check-circle"></i>Complete</li>
+                        <li class="base-lsit"><i class="fa fa-home"></i>Tasks</li>
+                     </ul>
+                  </div>
+                  <hr>
+                  <!-- ! ------------------------------ Customizable Lists (Comming soon) ------------------------------ ! -->
+                  <div class="customizable-list">
+                     <h2>Coming Soon</h2>
+                     <p>Costumizable Lists</p>
+                  </div>
+               </div>
+            </section>
+            <section class="task-section" id="task-section">
+               <!-- ! ------------------------------ task section header ------------------------------ ! -->
+               <div class="task-header-section">
+                  <div class="taskheader-name-date">
+                     <h1 class="list-name">My day</h1>
+                     <p class="the-date" title="Date">Thursday, March 31</p>
+                     <button class="listmenu-hambtn"><i class="fa-solid fa-align-center"></i></button>
+                  </div>
+                  <!-- <div class="taskheader-author-info">
+                     <a href="https://www.linkedin.com/in/iricge/" title="authors linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                     <a href="https://github.com/iricge" title="authors github"><i class="fa fa-github"></i></a>
+                  </div> -->
+                  <!-- ! ------------------------------ task section header Options ------------------------------ ! -->
+                  <div class="task-header-options">
+                     <ul>
+                        <li class="options-button">
+                           <i class="fa fa-ellipsis-h"></i>
+                           <ul class="taskheader-options-dropdown">
+                              <li><i class="fa fa-print"></i>Print</li>
+                              <li><i class="fa fa-envelope"></i>Email list</li>
+                              <li><i class="fa fa-map-pin"></i>Pin</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- ! ------------------------------ task section No task svg (when no task) ------------------------------ ! -->
+               <div class="no-tasks-svg">
+                  <img src="resource\images\logo\weekly-calendar-monthly-calendar-svgrepo-com.svg" alt="Calendar" class="calendar-notaks-svg">
+                  <h2 class="no-tasks-head">Focus on your day</h2>
+                  <p class="no-tasks-discreption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, mollitia.</p>
+               </div>
+               <!-- ! ------------------------------ task section Container & wrapper ------------------------------ ! -->
+               <div class="task-wrapper">
+                  <div class="task-generator">
+                     <form action="" class="taskgenerator-form" method="post">
+                        <button type="button" class="task-submitbtn" title="Add your task"><i class="fa fa-plus"></i></button>
+                        <input type="text" class="taskgene-title" title="Write your task title">
+                     </form>
+                  </div>
+                  <div class="task-container">
+                     <!-- ! ------------------------------ task section Container & placment ------------------------------ ! -->
+                     <ul class="taskparent-container">
+                     </ul>
+                  </div>
+               </div>
+            </section>
+         </main>
+         <script src="https://kit.fontawesome.com/9c345a79fa.js" crossorigin="anonymous"></script>
+         <script src="scripts/Sections/hamburgerlist.js"></script>
+         <script src="scripts/Sections/uploadimage.js"></script> 
+         <script src="scripts/Sections/taskgenerator.js"></script> 
+         <script src="scripts/Sections/loginpage.js"></script>
+      </body>
+   </div>
+   <!--! End of container -->
 </html>

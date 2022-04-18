@@ -1,4 +1,3 @@
-
 const firstLoginBtn = $.querySelector(".FirstTimeLogin");
 
 const userNameEmail = $.querySelector(".user-name-email-section");
@@ -32,9 +31,7 @@ userInputSubmit.addEventListener("click", ()=>{
       userName: userNameInput.value,
       userEmail: userEmailInput.value
     }
-    
     userInformationsArray.push(newUserInforamtion) 
- 
     var userInfoSaveLocalStorage = JSON.parse(localStorage.getItem("userProfileInfo"))
     userInfoLocalStorageSave(userInformationsArray)
 

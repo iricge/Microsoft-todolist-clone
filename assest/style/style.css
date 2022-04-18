@@ -1,45 +1,103 @@
-@import url(rester.css);
 @import url(Sections/listsection.css);
 @import url(Sections/tasksection.css);
 @import url(Sections/hamburgerlist.css);
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap');
-
 :root {
   --list-section-theme:#202020;
   --task-section-theme:#1c1c1c;
-
   --pale-white-txt:#bdbdbd;
   --text-theme:#479f99;
-  
   --selection-color: #505050;
 }
 *::selection{
   background: var(--selection-color);
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+html,
+body {
+  width: 100%;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  width: 100%;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-height: 100vh;
+}
+.wrapper {
+  width: 80%;
+  display: flex;
+}
 main {
   display: flex;
   position: absolute;
   flex-direction: row;
   width: 100%;
   min-width: 100%;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
+  transition: all 0.3s ease-in;
 }
-/* Z-indexs
- 
-task section  = 6
-
-task header section = 7
-
-task header section options dropdown = 8
-
-dark overlay = 9
-
-list section = 10
-
-*/

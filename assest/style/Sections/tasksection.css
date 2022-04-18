@@ -1,16 +1,15 @@
 main .task-section {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
   background-color: var(--task-section-theme);
   z-index: 3;
+  transition: all 0.3s ease-in;
 }
 /* ! -------------------------------- Task Header Section -------------------------------- ! */
-
 .task-header-section {
   display: flex;
   align-items: center;
@@ -19,13 +18,10 @@ main .task-section {
   padding: 20px 40px;
   width: 100%;
   height: 120px;
-  backdrop-filter: blur(20px);
   background-color: rgba(255, 255, 255, 0);
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
 }
-
 /* ! -------------------------------- Task Header Section Options & Dropdown -------------------------------- ! */
-
 .task-header-section .task-header-options {
   margin-left: auto;
   width: 30px;
@@ -58,7 +54,7 @@ main .task-section {
   border: 1px solid #363636;
   background-color: #212121;
 }
-.taskheader-options-dropdown li{
+.taskheader-options-dropdown li {
   transition: all 0.3s ease-in;
   margin: 5px 10px;
 }
@@ -68,26 +64,17 @@ main .task-section {
 .taskheader-options-dropdown li:hover {
   color: var(--text-theme);
 }
-.options-button:hover .taskheader-options-dropdown{
+.options-button:hover .taskheader-options-dropdown {
   height: 110px;
   opacity: 1;
 }
 /* ! -------------------------------- Task Header Info -------------------------------- ! */
-
 .taskheader-name-date {
   color: var(--text-theme);
   font-size: 1.2rem;
-  -webkit-touch-callout: text;
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
   user-select: text;
 }
-.taskheader-author-info{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.taskheader-author-info {
   font-size: 1.5rem;
 }
 .taskheader-author-info a i {
@@ -95,75 +82,78 @@ main .task-section {
   padding-right: 5px;
 }
 .list-name {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
   .taskheader-name-date {
-    font-size: 0.9rem;
+     font-size: 0.9rem;
+  }
+  .taskheader-author-info{
+    font-size: 1rem;
   }
 }
-
 /* ! -------------------------------- No Task Section (Defualt) -------------------------------- ! */
-
 .no-tasks-svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--text-theme);
   text-align: center;
+  transition: all 0.2s linear;
 }
 .no-tasks-svg p {
   width: 300px;
   font-size: 0.9rem;
 }
-.calendar-notaks-svg{
+.calendar-notaks-svg {
   width: 100px;
   height: 100px;
 }
-@media (max-width: 1100px){
+.no-tasks-svgactive {
+  opacity: 0;
+  visibility: hidden;
+}
+.no-tasks-svgdeactive {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+}
+@media (max-width: 1100px) {
   .calendar-notaks-svg {
-    width: 80px;
-    height: 80px;
+     width: 80px;
+     height: 80px;
   }
   .no-tasks-svg p {
-    width: 300px;
-    font-size: 0.9rem;
+     width: 300px;
+     font-size: 0.9rem;
   }
   .no-tasks-svg h2 {
-    font-size: 1.5rem;
+     font-size: 1.5rem;
   }
 }
-@media (max-width: 476px){
+@media (max-width: 476px) {
   .calendar-notaks-svg {
-    width: 70px;
-    height: 70px;
+     width: 70px;
+     height: 70px;
   }
   .no-tasks-svg p {
-    width: 250px;
-    font-size: 0.8rem;
+     width: 250px;
+     font-size: 0.8rem;
   }
   .no-tasks-svg h2 {
-    font-size: 1.2rem;
+     font-size: 1.2rem;
   }
   .taskheader-options-dropdown li {
-    width: 140px!important;
-    font-size: 0.9rem!important;
+     width: 140px !important;
+     font-size: 0.9rem !important;
   }
 }
-
 /* ! -------------------------------- Task Container & Wrapper -------------------------------- ! */
-
-.task-wrapper{
+.task-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,10 +168,8 @@ main .task-section {
   height: 85vh;
   overflow-y: auto;
   scrollbar-width: none;
-  scrollbar-base-color: var(--text-theme) var(--task-section-theme);
-  scroll-behavior: smooth;
 }
-.taskparent-container{
+.taskparent-container {
   display: flex;
   flex-direction: column;
   padding: 0 36px;
@@ -198,24 +186,14 @@ main .task-section {
   border-radius: 5px;
   border: 1px rgba(0, 0, 0, 0.4) solid;
   background-color: #2a2a2a;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 /* styling the inside of the tasks */
 .taskparent-container {
   transition: all 0.3s ease-in;
 }
-.task-title{
+.task-title {
   color: var(--pale-white-txt);
-  -webkit-touch-callout: text;
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
   user-select: text;
 }
 .taskdelete-btn {
@@ -228,6 +206,7 @@ main .task-section {
   outline: none;
   background-color: transparent;
   color: var(--text-theme);
+  transition: all 0.3s linear;
 }
 .taskdelete-btn:hover {
   cursor: pointer;
@@ -249,22 +228,18 @@ main .task-section {
   background: var(--text-theme) url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/1250% no-repeat;
   transition: background-size 0.2s ease;
 }
-
-.custom-checkbox input:checked + .checkmark {
+.custom-checkbox input:checked+.checkmark {
   background-size: 60%;
   transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
 }
-
 .custom-checkbox input {
   display: none;
 }
-
 .custom-importantcheckbox {
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin: 0;
-  margin-left: auto;
+  margin: 0 0 0 auto;
 }
 .custom-importantcheckbox .important-checkmark {
   width: 25px;
@@ -276,17 +251,14 @@ main .task-section {
   background: var(--text-theme) url(https://img.icons8.com/ios-filled/344/ffffff/star--v1.png) center/1200% no-repeat;
   transition: background-size 0.2s ease;
 }
-
-.custom-importantcheckbox input:checked + .important-checkmark {
+.custom-importantcheckbox input:checked+.important-checkmark {
   background-size: 70%;
   transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
 }
-
 .custom-importantcheckbox input {
   display: none;
 }
 /* ! -------------------------------- Task Section Input -------------------------------- ! */
-
 .task-generator {
   display: flex;
   justify-content: center;
@@ -323,5 +295,5 @@ main .task-section {
   color: var(--text-theme);
   background-color: transparent;
   border: none;
-  outline: none;  
+  outline: none;
 }

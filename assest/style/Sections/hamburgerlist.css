@@ -3,15 +3,10 @@
   display: none;
   background-color: #00000067;
   z-index: 9;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
+  position: absolute 0 0 0 0;
+  width: 100vw;
   height: 100vh;
 }
-/* to add black overlay effect */
 .listmenu-hambtn {
   width: 24px;
   height: 30px;
@@ -45,6 +40,10 @@
 .listmenu-hambackbtn:hover {
   cursor: pointer;
   background-color: #323232;
+}
+.listmenu-hamburgeractive{
+  display: flex!important;
+  left: 0!important;
 }
 @media (min-width: 800px) {
   .listmenu-hambtn {
