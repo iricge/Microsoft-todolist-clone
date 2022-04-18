@@ -39,10 +39,15 @@ I have cloned Microsoft Todolist with pure HTML, CSS, JAVASCRIPT 🦾 At this mo
 - [ ] Adding Key binds
 
 ## Desktop View
+<p align="center">
+  <img src="assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html.png" alt="Desktop view">
+</p>
 
-![Microsoft-TodoList-Desktop](assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html.png)
+## Mobile View
 
-![Microsoft-TodoList-Mobile](assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html%20(1).png)
+<p align="center">
+  <img src="assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html%20(1).png" alt="Mobile view">
+</p>
 
 ## license & copyright
 
