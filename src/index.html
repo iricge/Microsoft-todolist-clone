@@ -5,7 +5,6 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Microsoft Todolist</title>
-      <link href="style/style.css" rel="stylesheet" />
       <link href="#" rel="shortcut icon" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +28,7 @@
                   <div class="userinfo-section">
                      <div class="profile-picture-box">
                         <img src="resource/images/thumbnails/image.jpg" alt="" class="profile-picture">
-                        <input type="file" id="file">
+                        <input type="file" id="pfpselector">
                         <label for="file" id="uploadBtn">Choose Photo</label>
                      </div>
                      <div class="FirstTimeLogin">
@@ -108,16 +107,15 @@
                   <div class="task-container">
                      <!-- ! ------------------------------ task section Container & placment ------------------------------ ! -->
                      <ul class="taskparent-container">
+
+                        
                      </ul>
                   </div>
                </div>
             </section>
          </main>
          <script src="https://kit.fontawesome.com/9c345a79fa.js" crossorigin="anonymous"></script>
-         <script src="scripts/Sections/hamburgerlist.js"></script>
-         <script src="scripts/Sections/uploadimage.js"></script> 
-         <script src="scripts/Sections/taskgenerator.js"></script> 
-         <script src="scripts/Sections/loginpage.js"></script>
+         <script type="module" src="./scripts/main.js"></script>
       </body>
    </div>
    <!--! End of container -->

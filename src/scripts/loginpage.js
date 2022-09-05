@@ -1,14 +1,13 @@
-const firstLoginBtn = $.querySelector(".FirstTimeLogin");
+const firstLoginBtn = document.querySelector(".FirstTimeLogin");
 
-const userNameEmail = $.querySelector(".user-name-email-section");
-const userProfilePictureSection = $.querySelector(".profile-picture-box");
-let formBox = $.querySelector(".firstlogin-form");
-
-let userNameInput = $.querySelector(".username-input");
-let userEmailInput = $.querySelector(".useremail-input");
-let userNameHolder = $.querySelector(".username-holder");
-let userEmailHolder = $.querySelector(".useremail-holder");
-let userInputSubmit = $.querySelector(".userInput-submit")
+const userNameEmail = document.querySelector(".user-name-email-section");
+const userProfilePictureSection = document.querySelector(".profile-picture-box");
+let formBox = document.querySelector(".firstlogin-form");
+let userNameInput = document.querySelector(".username-input");
+let userEmailInput = document.querySelector(".useremail-input");
+let userNameHolder = document.querySelector(".username-holder");
+let userEmailHolder = document.querySelector(".useremail-holder");
+let userInputSubmit = document.querySelector(".userInput-submit")
 
 let userInformationsArray = []
 

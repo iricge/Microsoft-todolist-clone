@@ -184,7 +184,6 @@ main .task-section {
   padding: 10px;
   color: #fff;
   border-radius: 5px;
-  border: 1px rgba(0, 0, 0, 0.4) solid;
   background-color: #2a2a2a;
   user-select: none;
 }

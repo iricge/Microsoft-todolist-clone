@@ -1,6 +1,6 @@
-@import url(Sections/listsection.css);
-@import url(Sections/tasksection.css);
-@import url(Sections/hamburgerlist.css);
+@import url(listsection.css);
+@import url(tasksection.css);
+@import url(hamburgerlist.css);
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap');
 :root {
   --list-section-theme:#202020;
