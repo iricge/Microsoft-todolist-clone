@@ -42,19 +42,19 @@ You can see the preview here => https://microsoft-todolist-clone.netlify.app/ass
 ## Desktop View
 
 <p align="center">
-  <img src="assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html.png" alt="Desktop view">
+  <img src="./src/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html.png" alt="Desktop view">
 </p>
 <p align="center">
-  <img src="assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html.png" alt="Desktop view">
+  <img src="./src/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html.png" alt="Desktop view">
 </p>
 
 ## Mobile View
 
 <p align="center">
-  <img src="assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html%20(1).png" alt="Mobile view">
+  <img src="./src/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html (1).png" alt="Mobile view">
 </p>
 <p align="center">
-  <img src="assest/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html%20(1).png" alt="Mobile view">
+  <img src="./src/resource/images/template/_C__Users_asus_OneDrive_Desktop_files_Javascript_todolist_assest_index.html (1).png" alt="Mobile view">
 </p>
 
 ## license & copyright
